@@ -2,3 +2,5 @@
 !.gitignore
 !.vimrc
 !.gemrc
+!.bashrc
+!.profile
