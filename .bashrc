@@ -117,6 +117,10 @@ fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+if  [ -f /etc/profile.d/undistract-me.sh ]; then
+  . /etc/profile.d/undistract-me.sh
+fi
+
 ## work stuff
 if [ -f ~/.workrc ]; then
   . ~/.workrc
