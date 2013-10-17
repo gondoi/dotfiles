@@ -122,6 +122,14 @@ if  [ -f /etc/profile.d/undistract-me.sh ]; then
 fi
 
 ## work stuff
-if [ -f ~/.workrc ]; then
-  . ~/.workrc
+if [ -f ~/Dropbox/.workrc ]; then
+  . ~/Dropbox/.workrc
+fi
+
+## Python
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  export WORKON_HOME=$HOME/.venvs
+  . /usr/local/bin/virtualenvwrapper.sh
+else
+  echo "Python venv not setup!"
 fi
