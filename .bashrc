@@ -130,6 +130,9 @@ fi
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
   export WORKON_HOME=$HOME/.venvs
   . /usr/local/bin/virtualenvwrapper.sh
+  if ! workon sys; then
+    mkvirtualenv sys
+  fi
 else
-  echo "Python venv not setup!"
+  echo "Python virtualenvwrapper not setup!"
 fi
