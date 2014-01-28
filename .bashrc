@@ -113,10 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-## RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+## Undistract me
 if  [ -f /etc/profile.d/undistract-me.sh ]; then
   . /etc/profile.d/undistract-me.sh
 fi
@@ -136,3 +133,6 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 else
   echo "Python virtualenvwrapper not setup!"
 fi
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

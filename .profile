@@ -24,3 +24,6 @@ fi
 if [ -n "$SSH_CLIENT" -o -n "$SSH_TTY" ]; then
   _byobu_sourced=1 . /usr/bin/byobu-launch
 fi
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
