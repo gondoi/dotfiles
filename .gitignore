@@ -1,4 +1,7 @@
 *
+!.vim
+!.vim/autoload
+!.vim/autoload/*
 !.gitignore
 !.vimrc
 !.gemrc
