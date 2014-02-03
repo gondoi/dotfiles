@@ -40,13 +40,18 @@ fi
 [[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc" # Load .bashrc
 
 ## Python
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
 #  This _must_ be loaded last since it jacks with PATH if you don't
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
   export WORKON_HOME=$HOME/.venvs
   . /usr/local/bin/virtualenvwrapper.sh
-  if ! workon sys; then
-    mkvirtualenv sys
-  fi
+#  if ! workon sys; then
+#    mkvirtualenv sys
+#  fi
 else
   echo "Python virtualenvwrapper not setup!"
 fi
