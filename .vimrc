@@ -1,7 +1,13 @@
+" Pathogen load
+" filetype off
+
 execute pathogen#infect()
-filetype on
+execute pathogen#helptags()
+
 filetype plugin on
 filetype indent on
+syntax on
+
 set background=dark
 set expandtab
 autocmd Filetype gitcommit setlocal spell textwidth=72
