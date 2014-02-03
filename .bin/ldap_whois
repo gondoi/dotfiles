@@ -1,0 +1,1 @@
+ldapsearch -x -H $LDAP_SERVER -b $LDAP_ORG mail=$1*
