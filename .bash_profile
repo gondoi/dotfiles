@@ -2,17 +2,6 @@
 
 export PATH=/usr/local/bin:$PATH
 
-# Load virtualenvwrapper if we have it
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  export WORKON_HOME=$HOME/.venvs
-  . /usr/local/bin/virtualenvwrapper.sh
-#  if ! workon sys; then
-#    mkvirtualenv sys
-#  fi
-else
-  echo "Python virtualenvwrapper not setup!"
-fi
-
 # Load android tools
 ANDROID="Projects/android/adt-bundle-mac-x86_64-20131030/sdk"
 if [ -d "$HOME/$ANDROID" ]; then
@@ -44,6 +33,10 @@ fi
 export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+syspip(){
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 
 #  This _must_ be loaded last since it jacks with PATH if you don't
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
