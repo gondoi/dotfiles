@@ -2,6 +2,10 @@
 
 export PATH=/usr/local/bin:$PATH
 
+# GO Lang
+export GOPATH=~/.gocode
+export PATH=$PATH:~/.gocode/bin
+
 # Load android tools
 ANDROID="Projects/android/adt-bundle-mac-x86_64-20131030/sdk"
 if [ -d "$HOME/$ANDROID" ]; then
