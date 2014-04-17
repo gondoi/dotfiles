@@ -13,3 +13,4 @@ set expandtab
 autocmd Filetype gitcommit setlocal spell textwidth=72
 set list
 set listchars=tab:·\ ,trail:·
+set ruler
