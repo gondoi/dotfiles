@@ -2,6 +2,9 @@
 
 export PATH=/usr/local/bin:$PATH
 
+# ChefDK
+export PATH=$PATH:~/.chefdk/gem/ruby/2.1.0/bin
+
 # GO Lang
 export GOPATH=~/.gocode
 export PATH=$PATH:~/.gocode/bin
