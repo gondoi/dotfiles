@@ -33,7 +33,7 @@ fi
 ## Ruby
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
-  chruby ruby-2.1.0
+  chruby ruby-2.1.3
 fi
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
