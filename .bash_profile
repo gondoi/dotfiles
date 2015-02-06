@@ -2,6 +2,11 @@
 
 export PATH=/usr/local/bin:$PATH
 
+# docker
+if [ -f /usr/local/bin/boot2docker ]; then
+  eval $(boot2docker shellinit)
+fi
+
 # ChefDK
 export PATH=$PATH:~/.chefdk/gem/ruby/2.1.0/bin
 
