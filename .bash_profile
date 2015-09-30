@@ -15,7 +15,7 @@ export GOPATH=~/.gocode
 export PATH=$PATH:~/.gocode/bin
 
 # Load android tools
-ANDROID="Projects/android/adt-bundle-mac-x86_64-20131030/sdk"
+ANDROID="Projects/android/android-sdk-macosx"
 if [ -d "$HOME/$ANDROID" ]; then
   PATH=$PATH:$HOME/$ANDROID/platform-tools:$HOME/$ANDROID/tools
 fi
@@ -43,8 +43,6 @@ fi
 ## Python
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
-# cache pip-installed packages to avoid re-downloading
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 syspip(){
   PIP_REQUIRE_VIRTUALENV="" pip "$@"
