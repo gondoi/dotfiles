@@ -58,3 +58,6 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 else
   echo "Python virtualenvwrapper not setup!"
 fi
+
+# Enable pyenv
+eval "$(pyenv init -)"
