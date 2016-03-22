@@ -3,8 +3,8 @@
 export PATH=/usr/local/bin:$PATH
 
 # docker
-if [ -f /usr/local/bin/boot2docker ]; then
-  eval $(boot2docker shellinit)
+if [ -f /usr/local/bin/docker-machine ]; then
+  eval "$(docker-machine env default)"
 fi
 
 # ChefDK
