@@ -11,8 +11,8 @@ fi
 export PATH=$PATH:~/.chefdk/gem/ruby/2.1.0/bin
 
 # GO Lang
-export GOPATH=~/.gocode
-export PATH=$PATH:~/.gocode/bin
+export GOPATH=$HOME/Projects/go
+export PATH=$PATH:$GOPATH/bin
 
 # Load android tools
 ANDROID="Projects/android/android-sdk-macosx"
@@ -61,3 +61,5 @@ fi
 
 # Enable pyenv
 eval "$(pyenv init -)"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
