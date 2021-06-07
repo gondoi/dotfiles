@@ -1,8 +1,8 @@
 " Pathogen load
-" filetype off
+filetype off
 
-execute pathogen#infect()
-execute pathogen#helptags()
+call pathogen#infect()
+call pathogen#helptags()
 
 filetype plugin on
 filetype indent on
