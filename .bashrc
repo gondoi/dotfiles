@@ -131,6 +131,12 @@ fi
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
 
+# .local bin
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+                    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # Load android tools
 ANDROID="Projects/android/android-sdk-macosx"
 if [ -d "$HOME/$ANDROID" ]; then
@@ -164,24 +170,24 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 export PIP_REQUIRE_VIRTUALENV=true
 
 syspip(){
-  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+  PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 
 #  This _must_ be loaded last since it jacks with PATH if you don't
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  export WORKON_HOME=$HOME/.venvs
-  . /usr/local/bin/virtualenvwrapper.sh
-#  if ! workon sys; then
-#    mkvirtualenv sys
-#  fi
-else
-  echo "Python virtualenvwrapper not setup!"
-fi
+#if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#  export WORKON_HOME=$HOME/.venvs
+#  . /usr/local/bin/virtualenvwrapper.sh
+#elif [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
+#  export WORKON_HOME=$HOME/.venvs
+#  . $HOME/.local/bin/virtualenvwrapper.sh
+#else
+#  echo "Python virtualenvwrapper not setup!"
+#fi
 
 # Enable pyenv
-export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PATH="~/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 alias config='/usr/bin/git --git-dir=/home/gondoi/.cfg/ --work-tree=/home/gondoi'
