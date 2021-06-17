@@ -165,6 +165,11 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+## Setup direnv
+if [ -x $(which direnv) ]; then
+  eval "$(direnv hook bash)"
+fi
+
 ## Python
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
