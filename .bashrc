@@ -189,6 +189,10 @@ syspip(){
 #  echo "Python virtualenvwrapper not setup!"
 #fi
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Enable pyenv
 #export PATH="~/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
