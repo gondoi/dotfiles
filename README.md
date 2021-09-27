@@ -10,4 +10,9 @@ curl -Lks https://raw.githubusercontent.com/gondoi/dotfiles/master/.bin/install_
 
 After setup, `config` should be used in place of `git` to manage dotfiles.
 
+Required packages after setup:
+
+- Byobu - `apt install byobu`
+- PyEnv - `curl https://pyenv.run | bash`
+
 NOTE: Process used from [others](https://www.atlassian.com/git/tutorials/dotfiles).
