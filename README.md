@@ -14,5 +14,6 @@ Required packages after setup:
 
 - Byobu - `apt install byobu`
 - PyEnv - `curl https://pyenv.run | bash`
+- hstr - https://github.com/dvorka/hstr
 
 NOTE: Process used from [others](https://www.atlassian.com/git/tutorials/dotfiles).
